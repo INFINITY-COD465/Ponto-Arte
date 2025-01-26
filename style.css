@@ -9,8 +9,21 @@
 
 body{
     height: 100vh;
-    background-color: #000;
-    scroll-behavior: smooth;
+    background:linear-gradient(45deg, #142020, #0c1f33, #3b3b3b, #223636);
+    background-size: 400% 1640%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
 
 .interface{
@@ -285,11 +298,14 @@ section.slide-ponto-arte{
 section.especialidades{
     padding: 40px 4%;
     padding-top: 10%;
-
 }
 
 section.especialidades .flex{
     gap: 60px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
 }
 
 .especialidades .especialidades-box{
@@ -314,6 +330,12 @@ section.especialidades .flex{
     font-size: 28px;
     margin: 15px 0;
 }
+
+.especialidade-icons{
+    width: 20%;
+}
+
+
 
 /* ESTILO DO SOBRE */
     section.sobre{
@@ -379,7 +401,8 @@ section.especialidades .flex{
 
     section.portifolio .flex{
         justify-content: space-around;
-        padding-top: 10%;
+        padding-top: 5%;
+        
     }
 
     .img-port{
@@ -391,10 +414,12 @@ section.especialidades .flex{
         cursor: pointer;
         border-radius: 40px;
         position: relative;
+        box-shadow: 0 0.3rem 0.4rem 0.1rem #000000c4;
     }
 
     .img-port:hover{
         background-position: 100% 100%;
+        
     }
 
     .overlay{
@@ -712,6 +737,12 @@ section.especialidades .flex{
     /* ESPECIALIDADES */
     section.especialidades{
         padding: 40px 8%;
+    }
+
+    section.especialidades .flex{
+        gap: 50px;
+     display: flex;
+      
     }
 
     /* SOBRE */
