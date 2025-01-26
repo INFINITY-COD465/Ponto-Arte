@@ -53,7 +53,7 @@ new Swiper('.card-wrapper', {
 });
 
 function sendWhatsApp(){
-    var phonenumber = "+5511953904674";
+    var phonenumber = "+5511949995382";
 
     var nome = document.querySelector(".nome").value;
     var email = document.querySelector(".email").value;

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp&family=Material+Symbols+Outlined&family=Material+Symbols+Filled&family=Material+Symbols+Rounded&display=swap">
+    <script src="https://kit.fontawesome.com/d006b73b03.js"></script>
     
     <!-- FIM GOOGLE FONTS -->
       <!-- BOOTSTRAP ICONS -->
@@ -31,8 +32,8 @@
                 <ul>
                     <li><a href="#">Início</a></li>
                     <li><a href="#especialidades">Especialidades</a></li>
-                    <li><a href="#">sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#sobre">sobre</a></li>
+                    <li><a href="#Projetos">Projetos</a></li>
                 </ul>
             </nav>
 
@@ -55,9 +56,9 @@
                     <ul>
                         <li><a href="#">Início</a></li>
                         <li><a href="#especialidades">Especialidades</a></li>
-                        <li><a href="#">sobre</a></li>
-                        <li><a href="#">Projetos</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#sobre">sobre</a></li>
+                        <li><a href="#Projetos">Projetos</a></li>
+                        <li><a href="#orçamento">Contato</a></li>
                     </ul>
                 </nav>
             </div><!--menu-mobile-->
@@ -76,7 +77,7 @@
                         <P>Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, funcionalidade e qualidade,<br> estou pronto para criar projetos incríveis para o seu lar.<br></P>
 
                         <div class="btn-contato">
-                            <a href="#">
+                            <a href="#orçamento">
                                 <button>Solicite seu orçamento</button>
                             </a>
                         </div>
@@ -163,7 +164,7 @@
             </div><!--interface-->
         </section><!--especialidades-->
 
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
@@ -184,7 +185,7 @@
             </div><!--interface-->
         </section><!--sobre-->
         
-        <section class="portifolio">
+        <section class="portifolio" id="Projetos">
             <div class="interface">
                 <h2 class="titulo">ACOMPANHE NOSSO<span> TRABALHO.</span></h2>
                 <div class="flex">
@@ -201,11 +202,11 @@
             </div><!--interface-->
         </section><!--portifolio-->
 
-        <section class="formulario">
+        <section class="formulario" id="orçamento">
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
                 
-                <form action="">
+                <form class="formulario">
                     <input class="nome" type="text" name="" id="" placeholder="Seu nome completo:" required>
                     <input class="email" type="text" name="" id="" placeholder="Seu email:" required>
                     <input class="telefone" type="text" name="" id="" placeholder="Seu celular:">
@@ -217,24 +218,45 @@
     </main>
 
     <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <div class="logo-footer">
-                        <img src="image/logo-ponto-arte.png" alt="Logo agÊncia BRN">
-                    </div><!--logo-footer-->
-                        <div class="btn-social">
-                            <a href=""><button><i class="bi bi-instagram"></i></button></a>
-                            <a href=""><button><i class="bi bi-facebook"></i></button></a>
-                            <a href=""><button><i class="bi bi-whatsapp"></i></button></a>
-                        </div><!--social-->
+        <div class="row">
+            <div class="col-footer">
+                <img src="image/logo-ponto-arte.png" class="logo" alt="foto logo">
+                <h1>PONTO ARTE MARCENARIA</h1>
+                <p>Nossa missão é realizar sonhos.</p>
             </div>
-            </div><!--line-footer-->
-
-            <div class="line-footer borda">
-                <p><i class="bi bi-envelope-fill"></i><a href="mailto:contato@gustavo.com.br">contato@gustavo.com.br</a></p>
-            </div><!--line-footer-->
-        </div><!--interface-->
+            <div class="col">
+                <h3>Escritório <div class="underline"><span></span></div></h3>
+                <p>Av. Lourenço de Souza Franco - Mogi das Cruzes - SP</p>
+                <p>CEP 08750-560</p>
+                <p>CNPJ 51.430.551/0001-26</p>
+                <p class="email-id">pontoarte1994@gmail.com</p>
+                <h4>011 98646-8056</h4>
+            </div>
+            <div class="col">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="">Serviços</a></li>
+                    <li><a href="">Sobre nós</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Newsletter <div class="underline"><span></span></div></h3>
+                <form class="form-footer">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Seu email" required>
+                    <button class="btn-footer" type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <a href=""><button><i class="bi bi-instagram"></i></button><a>
+                    <a href=""><button><i class="bi bi-facebook"></i></button></a>
+                    <a href=""><button><i class="bi bi-whatsapp"></i></button></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2025 Ponto Arte - Marcenaria | Todos os direitos reservados | Desenvolvido por Infinity Tech</p>
     </footer>
 
       <!-- Linking SwiperJS script -->
