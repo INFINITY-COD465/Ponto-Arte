@@ -103,37 +103,37 @@ revelar.reveal('.efeito-especialidades1',
     {
         duration: 1000,
         distance: '90px',
-        delay:500
+        delay:200
 })
 revelar.reveal('.efeito-especialidades2',
     {
         duration: 1000,
         distance: '90px',
-        delay:1000
+        delay:400
 })
 revelar.reveal('.efeito-especialidades3',
     {
         duration: 1000,
         distance: '90px',
-        delay:1500
+        delay:600
 })
 revelar.reveal('.efeito-especialidades4',
     {
         duration: 1000,
         distance: '90px',
-        delay:2000
+        delay:800
 })
 revelar.reveal('.efeito-especialidades5',
     {
         duration: 1000,
         distance: '90px',
-        delay:2500
+        delay:1000
 })
 revelar.reveal('.efeito-especialidades6',
     {
         duration: 1000,
         distance: '90px',
-        delay:3000
+        delay:1200
 })
 
 // SESSÃO SOBRE //
@@ -159,7 +159,7 @@ revelar.reveal('.efeito-txt-sobre',
 revelar.reveal('.efeito-img1',
     {
         duration: 900,
-        distance: '800px',
+        distance: '320px',
         delay:500,
         origin: 'right'
 })
@@ -173,7 +173,7 @@ revelar.reveal('.efeito-img2',
 revelar.reveal('.efeito-img3',
     {
         duration: 900,
-        distance: '800px',
+        distance: '320px',
         delay:500,
         origin: 'left'
 })
@@ -184,7 +184,7 @@ revelar.reveal('.efeito-formulario1',
     {
         duration: 500,
         distance: '90px',
-        delay:200,
+        delay:50,
         origin: 'right'
 })
 
@@ -192,7 +192,7 @@ revelar.reveal('.efeito-formulario2',
     {
         duration: 500,
         distance: '90px',
-        delay:400,
+        delay:100,
         origin: 'right'
 })
 
@@ -200,7 +200,7 @@ revelar.reveal('.efeito-formulario3',
     {
         duration: 500,
         distance: '90px',
-        delay:600,
+        delay:200,
         origin: 'right'
 })
 
@@ -208,7 +208,7 @@ revelar.reveal('.efeito-formulario4',
     {
         duration: 500,
         distance: '90px',
-        delay:800,
+        delay:300,
         origin: 'right'
 })
 
@@ -216,6 +216,163 @@ revelar.reveal('.efeito-formulario5',
     {
         duration: 500,
         distance: '90px',
-        delay:1000,
+        delay:400,
         origin: 'right'
 })
+
+const telaPequena = window.matchMedia('(max-width: 768px)').matches;
+
+if (telaPequena) {
+    window.revelar = ScrollReveal({reset:true})
+
+    // EFEITOS DE ROLAGEM //
+window.revelar = ScrollReveal({reset:true})
+
+
+// TOPO DO SITE //
+revelar.reveal('.efeito-txt-topo',
+    {
+        duration: 1000,
+        distance: '20px',
+        origin:'bottom',
+        delay: 0
+
+})
+
+// TITULOS DAS SESSÕES //
+
+revelar.reveal('.titulo',
+    {
+        duration: 1000,
+        distance: '20px',
+        origin:'bottom',
+        delay: 0
+
+})
+
+// SESSÃO ESPECIAÇIDADES //
+
+
+revelar.reveal('.efeito-especialidades1',
+    {
+        duration: 500,
+        distance: '10px',
+        delay:100
+})
+revelar.reveal('.efeito-especialidades2',
+    {
+        duration: 500,
+        distance: '10px',
+        delay:100
+})
+revelar.reveal('.efeito-especialidades3',
+    {
+        duration: 500,
+        distance: '10px',
+        delay:100
+})
+revelar.reveal('.efeito-especialidades4',
+    {
+        duration: 500,
+        distance: '10px',
+        delay:100
+})
+revelar.reveal('.efeito-especialidades5',
+    {
+        duration: 500,
+        distance: '10px',
+        delay:100
+})
+revelar.reveal('.efeito-especialidades6',
+    {
+        duration: 500,
+        distance: '10px',
+        delay:100
+})
+
+// SESSÃO SOBRE //
+
+revelar.reveal('.efeito-img-sobre',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'left'
+})
+
+revelar.reveal('.efeito-txt-sobre',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'right'
+})
+
+// EFEITO TRABALHO //
+
+revelar.reveal('.efeito-img1',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'right'
+})
+revelar.reveal('.efeito-img2',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'bottom'
+})
+revelar.reveal('.efeito-img3',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'left'
+})
+
+// EFEITO FORMULARIO //
+
+revelar.reveal('.efeito-formulario1',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'right'
+})
+
+revelar.reveal('.efeito-formulario2',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'right'
+})
+
+revelar.reveal('.efeito-formulario3',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'right'
+})
+
+revelar.reveal('.efeito-formulario4',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'right'
+})
+
+revelar.reveal('.efeito-formulario5',
+    {
+        duration: 500,
+        distance: '10px',
+        delay: 0,
+        origin: 'right'
+})
+}
+
+

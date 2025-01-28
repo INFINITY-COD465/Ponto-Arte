@@ -8,24 +8,9 @@
 }
 
 body{
-    height: 100%;
-    background:linear-gradient(45deg, #142020, #0c1f33, #3b3b3b, #223636);
-    background-size: 300% 300% ;
-    animation: color 12s ease-in-out infinite;
+    height: 100vh;
+    background-color: #000;
 }
-
-@keyframes color{
-    0%{
-        background-position: 0 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0 50%;
-    }
-}
-
 .efeito-txt-topo, .titulo, .efeito-especialidades1, .efeito-especialidades2, .efeito-especialidades3, .efeito-especialidades4, .efeito-especialidades5, .efeito-especialidades6, .efeito-img-sobre, .efeito-txt-sobre, .efeito-img1, .efeito-img2, .efeito-img3, .efeito-formulario1, .efeito-formulario2, .efeito-formulario3, .efeito-formulario4, .efeito-formulario5{
     visibility: hidden;
 }
@@ -80,7 +65,7 @@ header{
 header.rolagem{
     background-color: #000000;
     padding: 5px 4%;
-    z-index: 99999;
+    z-index: 70000;
     transition: .2s;
 }
 
@@ -234,14 +219,17 @@ section.slide-ponto-arte{
     display: flex;
     width: 100%;
     object-fit: cover;
-    
 }
+
+
+
 
 .card-wrapper {
     max-width: 1100px;
     margin: 0 60px 35px;
     padding: 20px 10px;
     overflow: hidden;
+    
   }
   
   .card-list .card-item .card-link {
@@ -253,6 +241,7 @@ section.slide-ponto-arte{
     text-decoration: none;
     border: 2px solid transparent;
     transition: 0.2s ease;
+    
   }
   
   .card-list .card-item .card-link:active {
@@ -719,6 +708,10 @@ section.especialidades .flex{
         padding: 20px 8%;
         margin-top: 50%;
     }
+
+    .txt-topo-site {
+        z-index:-1;
+    }
     
     .topo-do-site h1 {
         font-size: 30px;
@@ -734,6 +727,7 @@ section.especialidades .flex{
         display: none;
       }
 
+      
     /* ESPECIALIDADES */
     section.especialidades{
         padding: 40px 8%;
