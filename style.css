@@ -11,6 +11,19 @@ body{
     height: 100vh;
     background-color: #000;
 }
+
+h1, h2,span{
+    font-family: "Montserrat";
+}
+
+.banner{
+    background-image: url(image/freepik__adjust__56532.png);
+    height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
 .efeito-txt-topo, .titulo, .efeito-especialidades1, .efeito-especialidades2, .efeito-especialidades3, .efeito-especialidades4, .efeito-especialidades5, .efeito-especialidades6, .efeito-img-sobre, .efeito-txt-sobre, .efeito-img1, .efeito-img2, .efeito-img3, .efeito-formulario1, .efeito-formulario2, .efeito-formulario3, .efeito-formulario4, .efeito-formulario5{
     visibility: hidden;
 }
@@ -185,8 +198,9 @@ header nav.menu-desktop ul li{
 
 /* ESTILO DO TOPO DO SITE */
 section.topo-do-site{
-    padding: 40px 4%;
-    margin-top: 20%;
+    padding: 40px 10%;
+    margin-top: -30%;
+
 }
 
 section.topo-do-site .flex{
@@ -209,16 +223,19 @@ section.topo-do-site .flex{
 .topo-do-site .txt-topo-site p{
     color: #fff;
     margin: 40px 0;
+    padding-right: 20%;
 }
+
 
 /* ESTILO SLIDER */
 section.slide-ponto-arte{
-    padding: 40px 4%;
+    padding: 65px 4%;
     align-items: center;
     justify-content: center;
     display: flex;
     width: 100%;
     object-fit: cover;
+    margin-top: 10%;
 }
 
 
@@ -328,7 +345,7 @@ section.especialidades .flex{
 
 /* ESTILO DO SOBRE */
     section.sobre{
-        padding: 80px 4%;
+        padding: 200px 4%;
     }
 
     section.sobre .flex{
@@ -386,12 +403,17 @@ section.especialidades .flex{
     section.portifolio{
         padding: 80px 4%;
         box-shadow: 0 0 40px 10px #ffffff1d;
+        
     }
 
     section.portifolio .flex{
         justify-content: space-around;
-        padding-top: 5%;
+        padding-top: 8%;
         
+    }
+
+    h2{
+        margin-top: 5%;
     }
 
     .img-port{
@@ -404,6 +426,7 @@ section.especialidades .flex{
         border-radius: 40px;
         position: relative;
         box-shadow: 0 0.3rem 0.4rem 0.1rem #000000c4;
+        margin-top: 5%;
     }
 
     .img-port:hover{
@@ -659,9 +682,6 @@ section.especialidades .flex{
             flex-direction: column;
         }
 
-        .topo-do-site .flex{
-            flex-direction: column-reverse;
-        }
 
         h2.titulo{
             font-size: 30px;
@@ -670,6 +690,16 @@ section.especialidades .flex{
         }
 
         /* CABEÇALHO */
+
+        .banner{
+            background-image: url(image/freepik__adjust__56532.png);
+            height: 100vh;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+        }
+
         .menu-desktop, .btn-contato{
             display: none;
         }
@@ -706,7 +736,7 @@ section.especialidades .flex{
     }
     section.topo-do-site{
         padding: 20px 8%;
-        margin-top: 50%;
+        margin-top: -120%;
     }
 
     .txt-topo-site {
