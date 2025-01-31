@@ -13,7 +13,7 @@ body{
 }
 
 h1, h2,span{
-    font-family: "Montserrat";
+    font-family: "Libre Baskerville", serif;
 }
 
 .banner{
@@ -49,7 +49,7 @@ h1, h2,span{
 }
 
 .btn-contato button:hover{
-    box-shadow: 0px 0px 8px #fff;
+    box-shadow: 0px 0px 20px #fff;
     transform: scale(1.05);
 }
 
@@ -69,15 +69,15 @@ form .btn-enviar input:hover{
 /* ESTILO DO CABEÇALHO */
 header{
     width: 100%;
-    padding: 40px 4%;
+    padding: 10px 4%;
     position: fixed;
     top: 0;
     left: 0;
 }
 
 header.rolagem{
-    background-color: #000000;
-    padding: 5px 4%;
+    background-color: rgba(0,0,0,0.9);
+    padding: 0;
     z-index: 70000;
     transition: .2s;
 }
@@ -116,6 +116,7 @@ header .menu-desktop a{
 header nav.menu-desktop a:hover{
     color: #cd853f;
     transform: scale(1.05);
+    
 }
 
 header nav ul{
@@ -714,15 +715,15 @@ section.especialidades .flex{
         }
 
         header.rolagem{
-            background-color: #000;
+            background-color: rgba(0,0,0,0.9);
             padding: 5px 4%;
-            z-index: 99999;
-            transition: .3s;
+            z-index: 70000;
+            transition: .2s;
         }
 
         header{
             width: 100%;
-            padding: 20px 4%;
+            padding: 10px 4%;
             position: fixed;
             top: 0;
             left: 0;
