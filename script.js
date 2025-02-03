@@ -290,6 +290,22 @@ revelar.reveal('.efeito-especialidades6',
         delay:100
 })
 
+// EFEITO FASES DO TRABALHO
+
+revelar.reveal('.efeito-especialidades6',
+    {
+        duration: 500,
+        distance: '10px',
+        delay:100
+})
+revelar.reveal('.efeito-especialidades6',
+    {
+        duration: 500,
+        distance: '10px',
+        delay:100
+})
+
+
 // SESSÃO SOBRE //
 
 revelar.reveal('.efeito-img-sobre',
@@ -375,4 +391,6 @@ revelar.reveal('.efeito-formulario5',
 })
 }
 
+
+// EFEITO TIME LINE DE TRABALHO
 
