@@ -49,7 +49,7 @@ h1, h2,span{
 }
 
 .btn-contato button:hover{
-    box-shadow: 0px 0px 20px #fff;
+    box-shadow: 0 0 15px #cd853f;
     transform: scale(1.05);
 }
 
@@ -63,7 +63,7 @@ h2.titulo span{
 }
 
 form .btn-enviar input:hover{
-    box-shadow: 0px 0px 8px #fff;
+    box-shadow: 0 0 15px #cd853f;
     transform: scale(1.05);
 }
 /* ESTILO DO CABEÇALHO */
@@ -328,7 +328,7 @@ section.especialidades .flex{
 
 .especialidades .especialidades-box:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 8px #ffffff78;
+    box-shadow: 0 0 8px #cd853f;
     transition: .2s;
     cursor: pointer;
 }
@@ -462,6 +462,7 @@ section.como-trabalhamos{
     padding: 1rem 1.5rem;
     border-radius: 10px;
     background-color: #050505f1;
+    border: 1px solid #fff;
   }
 
   .info:hover{
@@ -505,14 +506,14 @@ section.como-trabalhamos{
     height: 0;
     border-top: 14px solid transparent;
     border-bottom: 14px solid transparent;
-    border-left: 14px solid #cd853f;
+    border-left: 14px solid #fff;
     right: -14px;
     z-index: 10;
   }
   
   .box-right .info::after {
     border-left: 0;
-    border-right: 14px solid #cd853f;
+    border-right: 14px solid #fff;
     left: -14px;
   }
   
@@ -575,25 +576,53 @@ section.como-trabalhamos{
         text-align: justify;
     }
 
-    .btn-social button{
-        width: 50px;
-        height: 50px;
+    .btn-social ul{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+
+    .btn-social ul li{
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 60px;
+        color: #666;
+        font-size: 30px;
+        background: #000000;
+        line-height: 60px;
         border-radius: 50%;
-        border: none;
-        background-color: #cd853f;
-        font-size: 22px;
+        margin: 0 15px;
         cursor: pointer;
-        margin: 0 5px;
-        transition: .2s;
+        transition: .5s;
     }
 
-    .btn-social button:hover{
-        box-shadow: 0px 0px 8px #fff;
-        transform: scale(1.05);
+    .btn-social ul li:before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        background:  #d35400;
+        height: 100%;
+        width: 100%;
+        border-radius: 500%;
+        z-index: -1;
+        transform: scale(0.9);
+        transition: .5s;
     }
 
-    .btn-social i{
-        font-size: 25px;
+    .btn-social ul li:hover:before{
+        filter: blur(3px);
+        transform: scale(1.2);
+        box-shadow: 0 0 15px #cd853f;
+    }
+
+    .btn-social ul li:hover{
+        color: #ffa502;
+        box-shadow: 0 0 15px #cd853f;
+        text-shadow: 0 0 15px #cd853f;
     }
 
     /* MEU PORTIFÓLIO */
@@ -623,7 +652,7 @@ section.como-trabalhamos{
         border-radius: 40px;
         position: relative;
         box-shadow: 0 0.3rem 0.4rem 0.1rem #000000c4;
-        margin-top: 5%;
+        margin-top: 1%;
     }
 
     .img-port:hover{
@@ -687,6 +716,7 @@ section.como-trabalhamos{
         border-radius: 15px;
         color: #fff;
         font-size: 18px;
+        border: 1px solid #cd853f;
     }
 
     form textarea{
@@ -826,7 +856,7 @@ section.como-trabalhamos{
     }
 
     .social-icons button:hover{
-        box-shadow: 0px 0px 8px #fff;
+        box-shadow: 0 0 15px #cd853f;
         transform: scale(1.05);
     }
 
@@ -1006,7 +1036,7 @@ section.como-trabalhamos{
       
         .box-left .info::after {
           border-left: 0;
-          border-right: 14px solid #cd853f;
+          border-right: 14px solid #fff;
           left: -14px;
         }
       
