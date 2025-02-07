@@ -38,7 +38,27 @@ h1, h2,span{
 }
 
 .btn-contato button{
-    padding: 10px 40px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ffffff00;
+    border: 2px solid #cd853f;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: #5c5c5c;
+}
+
+.btn-contato button:hover{
+    color: #cd853f;
+    box-shadow: 0 0 15px #cd853f;
+    text-shadow: 0 0 15px #d35400;
+    transform: scale(1.05);
+    filter: drop-shadow(1px 1px 20px #cd853f)
+}
+
+.botao2 {
+    padding: 10px 30px;
     font-size: 18px;
     font-weight: 600;
     background-color: #cd853f;
@@ -48,7 +68,7 @@ h1, h2,span{
     transition: .2s;
 }
 
-.btn-contato button:hover{
+.botao2:hover{
     box-shadow: 0 0 15px #cd853f;
     transform: scale(1.05);
 }
@@ -321,7 +341,7 @@ section.especialidades .flex{
 
 .especialidades .especialidades-box{
     color: #fff;
-    padding: 40px;
+    padding: 20px;
     margin-top: 45px;
     border-radius: 20px;
 }
@@ -340,6 +360,27 @@ section.especialidades .flex{
 
 .especialidade-icons{
     width: 30%;
+}
+
+
+  .btn-serviços{
+   position: relative;
+    margin: 8px 0;
+    display:inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #ffffff00;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: #5c5c5c;
+  }
+
+  .btn-serviços:hover{
+    color: #cd853f;
+    text-shadow: 0 0 15px #d35400;
+    transform: scale(1.05);
+    filter: drop-shadow(1px 1px 20px #cd853f)
 }
 
 /* ESTILO COMO TRABALHAMOS */
@@ -731,6 +772,7 @@ section.como-trabalhamos{
     }
 
     form.formulario .btn-enviar input{
+        padding: 10px 0;
         width: 100px;
         background-color: #cd853f;
         color: #000;
@@ -806,6 +848,11 @@ section.como-trabalhamos{
     ul li a{
         text-decoration: none;
         color: #fff;
+    }
+
+    a:hover{
+        color: #cd853f;
+        
     }
 
     .form-footer {
@@ -972,6 +1019,10 @@ section.como-trabalhamos{
     
     .topo-do-site h1 {
         font-size: 30px;
+    }
+
+    .botao2{
+        display: none;
     }
 
     /* SLIDE DO SITE */
