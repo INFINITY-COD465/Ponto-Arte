@@ -392,5 +392,17 @@ revelar.reveal('.efeito-formulario5',
 }
 
 
-// EFEITO TIME LINE DE TRABALHO
+// BOTÃO FLUTUANTE WHATSAPP //
+
+const botaoWhatsapp = document.getElementById('whatsapp');
+
+botaoWhatsapp.addEventListener('click', () => {
+  const numeroTelefone = '5511949995382';
+  const mensagem = 'Olá, gostaria de saber mais informações!';
+
+  const urlWhatsapp = `https://wa.me/${numeroTelefone}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(urlWhatsapp, '_blank');
+});
+
 

@@ -12,6 +12,10 @@ body{
     background-color: #000;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 h1, h2,span{
     font-family: "Libre Baskerville", serif;
 }
@@ -190,13 +194,13 @@ header nav.menu-desktop ul li{
     cursor: pointer;
 }
 .menu-mobile nav ul{
-    text-align: right;
+    text-align: center;
 }
 
 .menu-mobile nav ul li a{
     color: #fff;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 600;
     padding: 20px 8%;
     display: block;
 }
@@ -364,10 +368,11 @@ section.especialidades .flex{
 
 
   .btn-serviços{
-   position: relative;
+    position: relative;
     margin: 8px 0;
     display:inline-block;
     text-decoration: none;
+    font-size: 18px;
     font-weight: 600;
     background-color: #ffffff00;
     border-radius: 30px;
@@ -758,6 +763,7 @@ section.como-trabalhamos{
         color: #fff;
         font-size: 18px;
         border: 1px solid #cd853f;
+        z-index: 999;
     }
 
     form textarea{
@@ -947,6 +953,53 @@ section.como-trabalhamos{
         100%{
             left: 100%;
         }
+    }
+
+    /* BOTÃO FLUTUANTE WHATSAPP */
+    .whatsapp{
+        position: fixed;
+        transform: all .5s ease;
+        background-color: #25d366;
+        display: block;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        border-radius: 50px;
+        border-right: none;
+        color: #fff;
+        font-weight: 700;
+        font-size: 30px;
+        bottom: 70px;
+        right: 20px;
+        border: 0;
+        z-index: 99;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .whatsapp:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-color: #25d366;
+        border-radius: 50%;
+        -webkit-animation: pulse-border 1500ms ease-out infinite;
+        animation:pulse-border 1500ms ease-out infinite;
+    }
+    .whatsapp:focus{
+        border: none;
+        outline: none;
+    }
+
+    @keyframes pulse-border{
+        0%{transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1); opacity: 1;}
+        100%{transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5); opacity: 0;}
     }
     /* MEDIA QUERIES */
 
