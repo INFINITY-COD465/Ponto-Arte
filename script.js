@@ -1,24 +1,78 @@
 
-let btnMenu = document.getElementById('btn-menu')
-let menu = document.getElementById('menu-mobile')
-let overlay = document.getElementById('overlay-menu')
+// menu mobile //
 
-btnMenu.addEventListener('click', ()=>{
-    menu.classList.add('abrir-menu')
-})
+const hamburger = document.querySelector('.mobile-menu');
+const overlay = document.querySelector('.overlay-menu');
+const meuMenu = document.querySelector('.nav-list');
 
-menu.addEventListener('click', ()=>{
-    menu.classList.remove('abrir-menu')
-})
 
-overlay.addEventListener('click', ()=>{
-    menu.classList.remove('abrir-menu')
-})
+// APLICAR O OVERLAY AO CLICAR NO MENU//
+hamburger.addEventListener('click', () => {
+  overlay.classList.toggle('active');
+});
+
+// REMOVER O OVERLAY AO CLICAR NO MENU//
+hamburger.addEventListener('click', (e) => {
+  if (e.target === overlay) {
+    overlay.classList.remove('active');
+  }
+});
+
+// TIRAR O OVERLAY AO CLICAR NOS LINKS //
+meuMenu.addEventListener('click', (e) => {
+    overlay.classList.remove('active');
+  
+});
 
 window.addEventListener('scroll', function(){
     let header = document.querySelector('#header')
     header.classList.toggle('rolagem', window.scrollY > 0)
-})
+});
+
+class MobileNavbar {
+    constructor(mobileMenu, navList, navLinks) {
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navList = document.querySelector(navList);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.activeClass = "active";
+        this.handleClick = this.handleClick.bind(this);
+    }
+    animateLinks() {
+        this.navLinks.forEach((link, index) => {
+            link.style.animation
+                ? (link.style.animation = "")
+                : (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`);
+        });
+    }
+
+    handleClick() {
+        this.navList.classList.toggle(this.activeClass);
+        this.mobileMenu.classList.toggle(this.activeClass);
+        this.animateLinks();
+    }
+
+    addClickEvent() {
+        this.mobileMenu.addEventListener("click", this.handleClick);
+        this.navList.addEventListener("click", this.handleClick);
+    }
+    init() {
+        if (this.mobileMenu) {
+            this.addClickEvent();
+        }
+        return this;
+    }
+}
+
+const mobileNavbar = new MobileNavbar(
+    ".mobile-menu",
+    ".nav-list",
+    ".nav-list li",
+);
+
+mobileNavbar.init();
+
+
+// SLIDER CARD //
 
 
 new Swiper('.card-wrapper', {

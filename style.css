@@ -34,7 +34,7 @@ h1, h2,span{
 
 .interface{
     max-width: 1280px;
-    margin: 0 auto;
+    margin:  auto;
 }
 
 .flex{
@@ -50,7 +50,7 @@ h1, h2,span{
     border-radius: 30px;
     cursor: pointer;
     transition: .2s;
-    color: #5c5c5c;
+    color: #ffffff8c;
 }
 
 .btn-contato button:hover{
@@ -93,33 +93,37 @@ form .btn-enviar input:hover{
 /* ESTILO DO CABEÇALHO */
 header{
     width: 100%;
-    padding: 10px 4%;
     position: fixed;
     top: 0;
     left: 0;
 }
 
-header.rolagem{
-    background-color: rgba(0,0,0,0.9);
-    padding: 0;
-    z-index: 70000;
-    transition: .2s;
+/* ESTILO DO MENU MOBILE */
+
+
+.nav-list a{
+    color: #ffffff8c;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 0 40px;
+    
 }
 
-header > .interface{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.nav-list a:hover{
+ color: #cd853f;
+ transform: scale(1.05);
 }
 
 header .logo img{
     width: 130px;
+    
 }
 
-header .interface .logo img{
+header .logo img{
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
+
 
 @keyframes flutuar{
     0%{
@@ -130,84 +134,49 @@ header .interface .logo img{
     }
 }
 
-header .menu-desktop a{
-    color: #5c5c5c;
-    text-decoration: none;
-    display: inline-block;
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: .2s;
+    height: 15vh; 
 }
 
-header nav.menu-desktop a:hover{
-    color: #cd853f;
-    transform: scale(1.05);
-    
+header.rolagem{
+    background-color: #524848e3;
+    padding: 0;
+    z-index: 88888;
+    transition: .5s;
 }
 
-header nav ul{
-    list-style-type: none;
+.nav-list{
+    list-style: none;
+    display: flex;
 }
 
-header nav.menu-desktop ul li{
-    display: inline-block;
-    padding: 0 40px;
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
 }
 
-/* ESTILO DO MENU MOBILE */
-
-.btn-abrir-menu i{
-    color: #cd853f;
-    font-size: 40px;
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #cd853f;
+    margin: 8px;
+    transition: 0.3s;
 }
 
-.btn-abrir-menu{
-    display: none;
-}
-
-
-.menu-mobile{
-    background-color: #000;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
-    width: 0%;
-    overflow: hidden;
-    transition: .3s;
-}
-
-.menu-mobile.abrir-menu{
-    width: 70%;
-}
-
-.menu-mobile.abrir-menu ~ .overlay-menu{
-    display: block;
-}
-
-.menu-mobile .btn-fechar{
-    padding: 20px 5%;
-}
-
-.menu-mobile .btn-fechar i{
-    color: #cd853f;
-    font-size: 30px;
+.mobile-menu{
     cursor: pointer;
-}
-.menu-mobile nav ul{
-    text-align: center;
+    display: none;
+    margin-left: 200px;
+    z-index: 999999;
 }
 
-.menu-mobile nav ul li a{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 20px 8%;
+.overlay-menu.active{
     display: block;
-}
-
-.menu-mobile nav ul li a:hover{
-    background-color: #cd853f;
-    color: #000;
 }
 
 .overlay-menu{
@@ -217,9 +186,11 @@ header nav.menu-desktop ul li{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 88888;
+    z-index: -77777;
     display: none;
 }
+
+
 
 /* ESTILO DO TOPO DO SITE */
 section.topo-do-site{
@@ -260,7 +231,7 @@ section.slide-ponto-arte{
     display: flex;
     width: 100%;
     object-fit: cover;
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 
@@ -1031,29 +1002,80 @@ section.como-trabalhamos{
             display: none;
         }
 
-        .btn-abrir-menu{
-            display: block;
+        /* MENU MOBILE */
+
+        body{
+            overflow-x: hidden;
         }
 
         header .logo img{
-            width:100px;
+            width: 100px;
+            margin-top: -10%;
             
         }
 
-        header.rolagem{
-            background-color: rgba(0,0,0,0.9);
-            padding: 5px 4%;
-            z-index: 70000;
-            transition: .2s;
+        .nav-list a{
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: 300;
+            padding: 10px 4%;
         }
 
-        header{
-            width: 100%;
-            padding: 10px 4%;
-            position: fixed;
+        .nav-list{
+            position: absolute;
             top: 0;
-            left: 0;
+            right: 0;
+            width: 70vw;
+            height: 110vh;
+            background: #524848;
+            flex-direction: column;
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in;
+            line-height: 90px;
         }
+        
+
+        .nav-list li{
+            margin-left: 0;
+            opacity: 0;
+        }
+
+        .nav-list a:hover{
+           
+            color: #cd853f;
+        }
+
+        .mobile-menu{
+            display: block;
+        }
+
+        .nav-list.active{
+            transform: translateX(0);
+        }
+
+        @keyframes navLinkFade{
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    .mobile-menu.active .line1{
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    .mobile-menu.active .line2{
+        opacity: 0;
+    }
+    .mobile-menu.active .line3{
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
     
 
     /* TOPO DO SITE */
