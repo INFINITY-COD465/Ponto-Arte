@@ -570,7 +570,8 @@ section.como-trabalhamos{
 
 /* ESTILO DO SOBRE */
     section.sobre{
-        padding: 200px 4%;
+        padding: 200px 10%;
+
     }
 
     section.sobre .flex{
@@ -578,6 +579,23 @@ section.como-trabalhamos{
         gap: 60px;
     }
 
+    .video-container {
+        border: 2px solid #cd853f;
+        border-radius: 15px; /* Bordas arredondadas */
+        margin: 20px 0; /* Centraliza o container */
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(22, 22, 22, 0.788); /* Sombra suave */
+       
+        
+      }
+
+      .responsive-video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
     .img-sobre img{
         width: 100%;
         border-radius: 25px;
@@ -591,6 +609,7 @@ section.como-trabalhamos{
         font-size: 40px;
         line-height: 40px;
         margin-bottom: 30px;
+        text-align: center;
     }
 
     .sobre .txt-sobre h2 span{
