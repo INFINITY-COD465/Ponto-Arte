@@ -205,7 +205,14 @@ revelar.reveal('.efeito-txt-sobre',
         duration: 2000,
         distance: '90px',
         delay:1000,
-        origin: 'right'
+        origin: 'bottom'
+})
+revelar.reveal('.video-sobre',
+    {
+        duration: 2000,
+        distance: '90px',
+        delay:100,
+        origin: 'bottom'
 })
 
 // EFEITO TRABALHO //
@@ -375,7 +382,7 @@ revelar.reveal('.efeito-txt-sobre',
         duration: 500,
         distance: '10px',
         delay: 0,
-        origin: 'right'
+        origin: 'bottom'
 })
 
 // EFEITO TRABALHO //
